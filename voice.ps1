@@ -20,9 +20,8 @@ try {
 	$Voice = New-Object -ComObject SAPI.SPVoice
 	$DefaultVolume = $Voice.volume
 	$DefaultRate = $Voice.rate
-	Speak("Let's begin with the default speed rate of $DefaultRate at the default volume of $($DefaultVolume)%.")
 	$Voice.rate = 0
-  $Voice.volume = 100
+  	$Voice.volume = 100
 	Speak("I am in your walls, you cannot escape me.")
 	exit 0 # success
 } catch {
